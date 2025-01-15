@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Words - คำถามภาษาอังกฤษ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        body {
+            background-color: #f3f4f6;
+            line-height: 1.6;
+            color: #374151;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .title {
+            color: #1e40af;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 6px;
+            color: white;
+        }
+
+        /* Card Header Colors */
+        .person { background: #dc2626; }
+        .time { background: #b45309; }
+        .place { background: #2563eb; }
+        .description { background: #1e40af; }
+        .reason { background: #f59e0b; }
+        .quantity { background: #7c3aed; }
+        .manner { background: #ef4444; }
+        .duration { background: #eab308; }
+        .frequency { background: #22c55e; }
+        .distance { background: #0284c7; }
+        .age { background: #991b1b; }
+        .possession { background: #a05a2c; }
+
+        .question-word {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .category {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .example {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8fafc;
+            border-radius: 4px;
+        }
+
+        .example-q {
+            color: #1e40af;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .example-a {
+            color: #6b7280;
+        }
+
+        .note {
+            background: #fff7ed;
+            border-left: 4px solid #f97316;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .subtitle {
+            color: #2563eb;
+            font-size: 1.5rem;
+            margin: 25px 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Question Words - คำถามภาษาอังกฤษ</h1>
+
+        <div class="note">
+            <h3>หลักการใช้ Question Words</h3>
+            <ul>
+                <li>ใช้เพื่อถามข้อมูลเฉพาะเจาะจง</li>
+                <li>ต้องการคำตอบที่เป็นข้อมูล ไม่ใช่เพียง Yes/No</li>
+                <li>มักใช้ร่วมกับ Helping Verbs (do, does, did, is, are, etc.)</li>
+            </ul>
+        </div>
+
+        <div class="question-grid">
+            <!-- Person -->
+            <div class="question-card">
+                <div class="card-header person">
+                    <div class="question-word">WHO</div>
+                    <div class="category">PERSON</div>
+                </div>
+                <div class="example">
+                    <div class="example-q">Q: Who's that man?</div>
+                    <div class="example-a">A: That's Peter.</div>
+                </div>
+                <p>ใช้ถามเกี่ยวกับบุคคล</p>
+            </div>
+
+            <!-- Place -->
+            <div class="question-card">
+                <div class="card-header place">
+                    <div class="question-word">WHERE</div>
+                    <div class="category">PLACE</div>
+                </div>
+                <div class="example">
+                    <div class="example-q">Q: Where do you live?</div>
+                    <div class="example-a">A: In London.</div>
+                </div>
+                <p>ใช้ถามเกี่ยวกับสถานที่</p>
+            </div>
+
+            <!-- Time -->
+            <div class="question-card">
+                <div class="card-header time">
+                    <div class="question-word">WHEN</div>
+                    <div class="category">TIME</div>
+                </div>
+                <div class="example">
+                    <div class="example-q">Q: When did he arrive?</div>
+                    <div class="example-a">A: In the afternoon.</div>
+                </div>
+                <p>ใช้ถามเกี่ยวกับเวลา</p>
+            </div>
+
+            <!-- Reason -->
+            <div class="question-card">
+                <div class="card-header reason">
+                    <div class="question-word">WHY</div>
+                    <div class="category">REASON</div>
+                </div>
+                <div class="example">
+                    <div class="example-q">Q: Why did you leave?</div>
+                    <div class="example-a">A: Because I was tired.</div>
+                </div>
+                <p>ใช้ถามเกี่ยวกับเหตุผล</p>
+            </div>
+
+            <!-- Manner -->
+            <div class="question-card">
+                <div class="card-header manner">
+                    <div class="question-word">HOW</div>
+                    <div class="category">MANNER</div>
+                </div>
+                <div class="example">
+                    <div class="example-q">Q: How did you go?</div>
+                    <div class="example-a">A: By car.</div>
+                </div>
+                <p>ใช้ถามเกี่ยวกับวิธีการ</p>
+            </div>
+
+            <!-- Choice -->
+            <div class="question-card">
+                <div class="card-header description">
+                    <div class="question-word">WHICH</div>
+                    <div class="category">CHOICE</div>
+                </div>
+                <div class="example">
+                    <div class="example-q">Q: Which car is better?</div>
+                    <div class="example-a">A: The red one.</div>
+                </div>
+                <p>ใช้ถามเพื่อเลือกจากตัวเลือกที่มี</p>
+            </div>
+
+            <!-- Possession -->
+            <div class="question-card">
+                <div class="card-header possession">
+                    <div class="question-word">WHOSE</div>
+                    <div class="category">POSSESSION</div>
+                </div>
+                <div class="example">
+                    <div class="example-q">Q: Whose book is this?</div>
+                    <div class="example-a">A: It's mine.</div>
+                </div>
+                <p>ใช้ถามเกี่ยวกับความเป็นเจ้าของ</p>
+            </div>
+
+            <!-- How Questions -->
+            <div class="question-card">
+                <div class="card-header duration">
+                    <div class="question-word">HOW LONG</div>
+                    <div class="category">DURATION</div>
+                </div>
+                <div class="example">
+                    <div class="example-q">Q: How long did you stay?</div>
+                    <div class="example-a">A: Two weeks.</div>
+                </div>
+                <p>ใช้ถามเกี่ยวกับระยะเวลา</p>
+            </div>
+
+            <div class="question-card">
+                <div class="card-header quantity">
+                    <div class="question-word">HOW MANY</div>
+                    <div class="category">COUNTABLE</div>
+                </div>
+                <div class="example">
+                    <div class="example-q">Q: How many beds are there?</div>
+                    <div class="example-a">A: Three.</div>
+                </div>
+                <p>ใช้ถามจำนวนสิ่งของที่นับได้</p>
+            </div>
+
+            <div class="question-card">
+                <div class="card-header quantity">
+                    <div class="question-word">HOW MUCH</div>
+                    <div class="category">UNCOUNTABLE</div>
+                </div>
+                <div class="example">
+                    <div class="example-q">Q: How much tea is there?</div>
+                    <div class="example-a">A: A lot.</div>
+                </div>
+                <p>ใช้ถามปริมาณสิ่งของที่นับไม่ได้</p>
+            </div>
+
+            <div class="question-card">
+                <div class="card-header frequency">
+                    <div class="question-word">HOW OFTEN</div>
+                    <div class="category">FREQUENCY</div>
+                </div>
+                <div class="example">
+                    <div class="example-q">Q: How often do you go?</div>
+                    <div class="example-a">A: Every day.</div>
+                </div>
+                <p>ใช้ถามเกี่ยวกับความถี่</p>
+            </div>
+
+            <div class="question-card">
+                <div class="card-header age">
+                    <div class="question-word">HOW OLD</div>
+                    <div class="category">AGE</div>
+                </div>
+                <div class="example">
+                    <div class="example-q">Q: How old is your sister?</div>
+                    <div class="example-a">A: She's 27.</div>
+                </div>
+                <p>ใช้ถามเกี่ยวกับอายุ</p>
+            </div>
+        </div>
+
+        <div class="note">
+            <h3>Tips การใช้ Question Words</h3>
+            <ul>
+                <li>เลือกใช้ Question Word ให้เหมาะกับข้อมูลที่ต้องการถาม</li>
+                <li>สังเกตว่าต้องการถามเกี่ยวกับ คน สถานที่ เวลา หรือเหตุผล</li>
+                <li>ระวังการใช้ How Many vs How Much ให้เหมาะกับคำนามที่ถาม</li>
+                <li>Which ใช้เมื่อมีตัวเลือกจำกัด ส่วน What ใช้ถามแบบทั่วไป</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
