@@ -1,183 +1,145 @@
-import React, { useState } from 'react';
-import { Menu, ChevronDown, Book, FileQuestion, Users, Layout } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทเรียนไวยากรณ์ระดับ A2 - มกราคม 2025</title>
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #4CAF50;
+        }
+        h1 {
+            color: #2E7D32;
+            margin: 0;
+        }
+        .menu-section {
+            margin: 20px 0;
+        }
+        .menu-section h2 {
+            color: #1B5E20;
+            border-left: 4px solid #4CAF50;
+            padding-left: 10px;
+        }
+        .lesson-list {
+            list-style: none;
+            padding: 0;
+        }
+        .lesson-item {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #E8F5E9;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .lesson-item:hover {
+            background-color: #C8E6C9;
+        }
+        .lesson-link {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+        .lesson-date {
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>บทเรียนไวยากรณ์ภาษาอังกฤษระดับ A2</h1>
+            <p>อัปเดตล่าสุด: 15 มกราคม 2025</p>
+        </header>
 
-const GrammarLesson = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isOpen, setIsOpen] = useState(false);
-
-  const menuItems = [
-    { id: 'overview', title: 'ภาพรวม', icon: <Layout className="w-4 h-4" /> },
-    { id: 'yesno', title: 'Yes/No Questions', icon: <FileQuestion className="w-4 h-4" /> },
-    { id: 'wh', title: 'Wh-Questions', icon: <Book className="w-4 h-4" /> },
-    { id: 'subject', title: 'Subject Questions', icon: <Users className="w-4 h-4" /> }
-  ];
-
-  const renderContent = () => {
-    switch(activeTab) {
-      case 'overview':
-        return (
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-blue-600">ภาพรวมประเภทของคำถามในภาษาอังกฤษ</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="p-4 bg-white rounded-lg shadow">
-                <h3 className="text-lg font-semibold text-blue-500">Yes/No Questions</h3>
-                <p>คำถามที่ต้องการคำตอบว่า ใช่ หรือ ไม่ใช่</p>
-              </div>
-              <div className="p-4 bg-white rounded-lg shadow">
-                <h3 className="text-lg font-semibold text-blue-500">Wh-Questions</h3>
-                <p>คำถามที่ต้องการข้อมูลเฉพาะเจาะจง</p>
-              </div>
-              <div className="p-4 bg-white rounded-lg shadow">
-                <h3 className="text-lg font-semibold text-blue-500">Subject Questions</h3>
-                <p>คำถามที่คำถามทำหน้าที่เป็นประธาน</p>
-              </div>
-              <div className="p-4 bg-white rounded-lg shadow">
-                <h3 className="text-lg font-semibold text-blue-500">รูปแบบการใช้งาน</h3>
-                <p>วิธีการสร้างคำถามแต่ละประเภท</p>
-              </div>
-            </div>
-          </div>
-        );
-      case 'yesno':
-        return (
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-blue-600">Yes/No Questions</h2>
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h3 className="font-semibold">โครงสร้าง:</h3>
-              <p className="text-blue-600">Helping Verb + Subject + Main Verb + (Rest)?</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">ตัวอย่าง:</h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Do you like coffee? - คุณชอบกาแฟไหม</li>
-                <li>Can she swim? - เธอว่ายน้ำเป็นไหม</li>
-                <li>Is he working? - เขากำลังทำงานอยู่หรือไม่</li>
-              </ul>
-            </div>
-          </div>
-        );
-      case 'wh':
-        return (
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-blue-600">Wh-Questions</h2>
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h3 className="font-semibold">โครงสร้าง:</h3>
-              <p className="text-blue-600">Question Word + Helping Verb + Subject + Main Verb + (Rest)?</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white p-4 rounded-lg shadow">
-                <h3 className="font-semibold text-blue-500">คำถามเกี่ยวกับบุคคล</h3>
-                <p>WHO - ใครทำอะไร</p>
-                <p className="text-gray-600">Who is your teacher?</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow">
-                <h3 className="font-semibold text-blue-500">คำถามเกี่ยวกับสถานที่</h3>
-                <p>WHERE - ที่ไหน</p>
-                <p className="text-gray-600">Where do you live?</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow">
-                <h3 className="font-semibold text-blue-500">คำถามเกี่ยวกับเวลา</h3>
-                <p>WHEN - เมื่อไหร่</p>
-                <p className="text-gray-600">When does the movie start?</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow">
-                <h3 className="font-semibold text-blue-500">คำถามเกี่ยวกับเหตุผล</h3>
-                <p>WHY - ทำไม</p>
-                <p className="text-gray-600">Why are you late?</p>
-              </div>
-            </div>
-          </div>
-        );
-      case 'subject':
-        return (
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-blue-600">Subject Questions</h2>
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h3 className="font-semibold">โครงสร้างพิเศษ:</h3>
-              <p className="text-blue-600">Question Word + Main Verb + (Rest)?</p>
-              <p className="text-sm text-gray-600">*ไม่ต้องใช้ Helping Verb เมื่อคำถามเป็นประธาน</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow">
-              <h3 className="font-semibold">ตัวอย่าง:</h3>
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Who called Teresa? - ใครโทรหาเทเรซา</li>
-                <li>Who lives here? - ใครอาศัยอยู่ที่นี่</li>
-                <li>What happened? - เกิดอะไรขึ้น</li>
-              </ul>
-            </div>
-          </div>
-        );
-      default:
-        return null;
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-xl font-bold text-blue-600">บทเรียนไวยากรณ์ A2</h1>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-gray-100"
-            >
-              <Menu className="w-6 h-6" />
-            </button>
-          </div>
+        <div class="menu-section">
+            <h2>บทเรียนพื้นฐาน</h2>
+            <ul class="lesson-list">
+                <li class="lesson-item">
+                    <a href="#present-continuous" class="lesson-link">
+                        Present Continuous Tense
+                        <span class="lesson-date">15/01/2025</span>
+                    </a>
+                </li>
+                <li class="lesson-item">
+                    <a href="#past-simple" class="lesson-link">
+                        Past Simple Tense
+                        <span class="lesson-date">15/01/2025</span>
+                    </a>
+                </li>
+                <li class="lesson-item">
+                    <a href="#future-going-to" class="lesson-link">
+                        Future with 'Going to'
+                        <span class="lesson-date">15/01/2025</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-      </header>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white border-b">
-          <div className="px-4 py-2">
-            {menuItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => {
-                  setActiveTab(item.id);
-                  setIsOpen(false);
-                }}
-                className={`w-full text-left px-4 py-2 rounded-lg flex items-center space-x-2 ${
-                  activeTab === item.id ? 'bg-blue-50 text-blue-600' : 'hover:bg-gray-50'
-                }`}
-              >
-                {item.icon}
-                <span>{item.title}</span>
-              </button>
-            ))}
-          </div>
+        <div class="menu-section">
+            <h2>โครงสร้างประโยค</h2>
+            <ul class="lesson-list">
+                <li class="lesson-item">
+                    <a href="#comparatives" class="lesson-link">
+                        Comparatives และ Superlatives
+                        <span class="lesson-date">15/01/2025</span>
+                    </a>
+                </li>
+                <li class="lesson-item">
+                    <a href="#modals" class="lesson-link">
+                        Modal Verbs (can, could, should)
+                        <span class="lesson-date">15/01/2025</span>
+                    </a>
+                </li>
+                <li class="lesson-item">
+                    <a href="#prepositions" class="lesson-link">
+                        Prepositions of Place and Time
+                        <span class="lesson-date">15/01/2025</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-      )}
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Desktop Sidebar */}
-          <div className="hidden md:block space-y-2">
-            {menuItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => setActiveTab(item.id)}
-                className={`w-full px-4 py-2 rounded-lg flex items-center space-x-2 ${
-                  activeTab === item.id ? 'bg-blue-50 text-blue-600' : 'hover:bg-gray-50'
-                }`}
-              >
-                {item.icon}
-                <span>{item.title}</span>
-              </button>
-            ))}
-          </div>
-
-          {/* Main Content */}
-          <div className="md:col-span-3">
-            {renderContent()}
-          </div>
+        <div class="menu-section">
+            <h2>บทเรียนเพิ่มเติม</h2>
+            <ul class="lesson-list">
+                <li class="lesson-item">
+                    <a href="#articles" class="lesson-link">
+                        Articles (a, an, the)
+                        <span class="lesson-date">15/01/2025</span>
+                    </a>
+                </li>
+                <li class="lesson-item">
+                    <a href="#countable" class="lesson-link">
+                        Countable และ Uncountable Nouns
+                        <span class="lesson-date">15/01/2025</span>
+                    </a>
+                </li>
+                <li class="lesson-item">
+                    <a href="#conjunctions" class="lesson-link">
+                        Conjunctions (and, but, because)
+                        <span class="lesson-date">15/01/2025</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-      </div>
     </div>
-  );
-};
-
-export default GrammarLesson;
+</body>
+</html>
