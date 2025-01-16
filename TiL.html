@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEFR Listening Strategies Guide</title>
+    <title>กลยุทธ์การฟังสำหรับ CEFR</title>
     <style>
         * {
             margin: 0;
@@ -34,8 +34,8 @@
         .section {
             background: white;
             border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 30px;
+            padding: 25px;
+            margin-bottom: 25px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
@@ -55,112 +55,131 @@
             border-left: 4px solid #0ea5e9;
         }
 
+        .skill-card {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
         .tip-title {
             color: #0369a1;
-            font-weight: bold;
+            font-size: 1.2rem;
             margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .tip-description {
-            color: #6b7280;
-        }
-
-        .skill-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .skill-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
         }
 
         .example {
             background: #ecfdf5;
-            padding: 10px;
-            margin-top: 10px;
+            padding: 12px;
+            margin: 10px 0;
             border-radius: 4px;
-            font-size: 0.9rem;
+            font-style: italic;
         }
 
         .practice-box {
             background: #eff6ff;
-            padding: 20px;
+            padding: 15px;
+            margin: 15px 0;
             border-radius: 8px;
-            margin-top: 20px;
+        }
+
+        .highlight {
+            color: #0369a1;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="title">CEFR Listening Skills Guide</h1>
+        <h1 class="title">กลยุทธ์การฟังสำหรับการสอบ CEFR</h1>
 
+        <!-- General Tips Section -->
         <div class="section">
-            <h2 class="section-title">General Tips for Success</h2>
+            <h2 class="section-title">เทคนิคพื้นฐานการฟัง</h2>
+            
             <div class="tip-card">
-                <h3 class="tip-title">📌 Stay Focused</h3>
-                <p class="tip-description">ตั้งใจฟังตั้งแต่เริ่มต้น การพลาดไม่กี่วินาทีแรกอาจทำให้พลาดข้อมูลสำคัญ</p>
-                <div class="example">Tip: ฝึกสมาธิก่อนการฟังด้วยการหายใจลึกๆ และเตรียมอุปกรณ์ให้พร้อม</div>
+                <h3 class="tip-title">1. Stay Focused (รักษาสมาธิ)</h3>
+                <p>ให้ความสนใจตั้งแต่เริ่มต้น การพลาดเพียงไม่กี่วินาทีแรกอาจส่งผลต่อความเข้าใจทั้งหมด</p>
+                <div class="practice-box">
+                    <strong>วิธีฝึก:</strong>
+                    <ul>
+                        <li>ฝึกจดจ่อกับเสียงในช่วงสั้นๆ เพิ่มเวลาทีละน้อย</li>
+                        <li>หาที่เงียบสงบในการฝึกฟัง</li>
+                        <li>พยายามคาดเดาเนื้อหาที่จะได้ยินจากหัวข้อ</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="tip-card">
-                <h3 class="tip-title">📝 Take Notes</h3>
-                <p class="tip-description">จดคำสำคัญหรือวลีที่สำคัญ จะช่วยให้ตอบคำถามเกี่ยวกับรายละเอียดและใจความสำคัญได้ง่ายขึ้น</p>
-                <div class="example">Practice: ฝึกจดโดยใช้สัญลักษณ์และคำย่อที่เข้าใจง่าย</div>
+                <h3 class="tip-title">2. Take Notes (จดบันทึก)</h3>
+                <p>จดคำสำคัญหรือวลีที่สำคัญ เพื่อช่วยในการตอบคำถามเกี่ยวกับรายละเอียดและใจความสำคัญ</p>
+                <div class="example">
+                    ฝึกจดแบบย่อ: numbers, names, dates, key actions
+                </div>
             </div>
 
             <div class="tip-card">
-                <h3 class="tip-title">🎯 Listen for Clues</h3>
-                <p class="tip-description">สังเกตคำเชื่อมที่แสดงการเปลี่ยนความคิด เช่น "however" หรือ "on the other hand"</p>
-            </div>
-
-            <div class="tip-card">
-                <h3 class="tip-title">😌 Stay Calm</h3>
-                <p class="tip-description">ถ้าพลาดบางส่วน อย่าตื่นตระหนก ให้มุ่งความสนใจไปที่ส่วนถัดไปเพื่อไม่ให้พลาดเพิ่ม</p>
+                <h3 class="tip-title">3. Stay Calm (รักษาความสงบ)</h3>
+                <p>ถ้าพลาดบางส่วน อย่าตกใจ ให้มุ่งเน้นกับส่วนต่อไปของเสียง</p>
+                <div class="practice-box">
+                    <strong>เทคนิคการจัดการความเครียด:</strong>
+                    <ul>
+                        <li>หายใจลึกๆ ก่อนเริ่มฟัง</li>
+                        <li>เตือนตัวเองว่าไม่จำเป็นต้องเข้าใจทุกคำ</li>
+                        <li>มุ่งเน้นที่การจับใจความสำคัญ</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
+        <!-- Specific Skills Section -->
         <div class="section">
-            <h2 class="section-title">Specific Listening Skills</h2>
-            <div class="skill-grid">
-                <div class="skill-card">
-                    <h3>Focus Skills</h3>
-                    <ul>
-                        <li>Focus on the last line</li>
-                        <li>Choose answers with synonyms</li>
-                        <li>Avoid similar sounds</li>
-                        <li>Draw conclusions about who, what, where</li>
-                        <li>Listen for who and what in passives</li>
-                    </ul>
-                </div>
+            <h2 class="section-title">ทักษะเฉพาะทาง</h2>
 
-                <div class="skill-card">
-                    <h3>Advanced Listening Skills</h3>
-                    <ul>
-                        <li>Listen for who/what with multiple nouns</li>
-                        <li>Listen for negative expressions</li>
-                        <li>Listen for double negatives</li>
-                        <li>"Almost negative" expressions</li>
-                        <li>Negatives with comparatives</li>
-                    </ul>
-                </div>
+            <div class="skill-card">
+                <h3 class="tip-title">การฟังหาคำสำคัญ</h3>
+                <ul>
+                    <li>Focus on the last line ฟังประโยคสุดท้ายให้ดี</li>
+                    <li>Choose answer with synonyms จับคู่คำที่มีความหมายเหมือนกัน</li>
+                    <li>Avoid similar sounds ระวังคำที่ออกเสียงคล้ายกัน</li>
+                </ul>
             </div>
 
-            <div class="practice-box">
-                <h3>แนวทางการฝึกฝน</h3>
+            <div class="skill-card">
+                <h3 class="tip-title">การฟังแบบวิเคราะห์</h3>
                 <ul>
-                    <li>ฝึกฟังบทสนทนาภาษาอังกฤษทุกวัน อย่างน้อยวันละ 15 นาที</li>
-                    <li>ฝึกจับประเด็นสำคัญและสรุปใจความหลังการฟัง</li>
-                    <li>ทำแบบฝึกหัดการฟังหลากหลายรูปแบบ</li>
-                    <li>ฟังซ้ำและตรวจสอบความเข้าใจ</li>
-                    <li>จดบันทึกคำศัพท์และสำนวนใหม่ๆ</li>
+                    <li>Draw conclusions about who, what, where สรุปเกี่ยวกับ ใคร ทำอะไร ที่ไหน</li>
+                    <li>Listen for who and what in passives ฟังประธานและกรรมในประโยค passive</li>
+                    <li>Listen for multiple nouns ฟังคำนามหลายๆ คำ</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3 class="tip-title">การฟังประโยคปฏิเสธ</h3>
+                <ul>
+                    <li>Listen for negative expressions ฟังสำนวนปฏิเสธ</li>
+                    <li>Listen for double negatives ฟังการปฏิเสธซ้อน</li>
+                    <li>Listen for "almost negative" expressions ฟังสำนวนที่เกือบเป็นปฏิเสธ</li>
+                    <li>Listen for negatives with comparatives ฟังการปฏิเสธที่ใช้กับการเปรียบเทียบ</li>
+                </ul>
+                <div class="example">
+                    ตัวอย่าง: hardly, barely, scarcely, neither, nor
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice Tips Section -->
+        <div class="section">
+            <h2 class="section-title">แนวทางการฝึกฝน</h2>
+            <div class="practice-box">
+                <ul>
+                    <li>ฝึกฟังบทสนทนาและพยายามสรุปใจความสำคัญ</li>
+                    <li>ฟังข่าวภาษาอังกฤษสั้นๆ ทุกวัน</li>
+                    <li>ดูวิดีโอภาษาอังกฤษที่มีคำบรรยาย</li>
+                    <li>ฝึกทำข้อสอบตัวอย่าง CEFR</li>
+                    <li>บันทึกคำศัพท์และสำนวนใหม่ๆ ที่ได้ยิน</li>
                 </ul>
             </div>
         </div>
